@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar React Menggunakan CDN</title>
+</head>
+<body>
+    
+    <div id="root"></div>
+    
+    
+    <script crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+        const root = document.querySelector("#root");
+        
+        const state = {
+            name: "Maulana Yusuf"
+        };
+        
+        /* 
+            dengan babel maka kita bisa menulis elemen html di dalam js.
+            Ini disebut JSX => Javascript XML
+            
+            Dalam penulisan JSX, semua tag yang ada di HTML harus ditutup dengan nama tag sama seperti tag pembuka.
+        */
+        
+        const el = (
+            <div>
+                {/*Ini adalah comment di dalam JSX saat mendeklarasikan tag HTML*/}
+                <h1>Belajar React</h1>
+                <br/>
+                <h3>Bissmillah</h3>
+                <br></br>
+                <p>Halo nama saya {state.name}</p> {/* Di JSX, kita dapat mengakses variabel / fungsi yang kita buat, yaitu dengan diapit tanda {} lalu diisi dengan nama variabel / fungsi tsb  */} 
+                <hr/>
+            </div>
+        );
+        
+        ReactDOM.render(el, root);
+        
+        
+        // REACT COMPONENT
+        
+        const el2 = (
+            <div>
+                <h1>Halo Maulana</h1>
+                <h1>Halo Yusuf</h1>
+                <h1>Halo Sandi</h1>
+            </div>
+        );
+        
+        ReactDOM.render(el2, root);
+        
+        
+        /*
+            Cara mendefinisikan tag HTML diatas sangat tidak efektif, karena kode yang dituliskan berulang.
+            Di React, terdapat fitur React Component. Fitur ini membungkus tag HTML yang akan kita gunakan dan kita dapat mengirimkan parameter/nilai yang di React Component disebut props.  
+            Cara mendefinisikan React Component sama seperti function, namun berisi tag HTML, didahului oleh huruf besar dan menerima 1 parameter yang disebut props.
+        */
+        const Halo = props => <h1>{props.name}</h1> // mendefinisikan react component
+        
+        /*
+            ketika kita ingin mengirim nilai ke dalam react component, cara yang digunakan itu sama seperti kita menuliskan atribut di dalam tag HTML. Nama atribut yang ingin dikirimkan bebas tidak terikat oleh aturan apapun. 
+            React component menerima data yang dikirimkan berupa objek. Objek tsb berisi nama atribut yang dikirimkan serta nilainya.
+        */
+        const el3 = (
+            <div>
+                <Halo name="Maulana"/> 
+                <Halo name="Wisnu"/>
+                <Halo name="Yusuf"/>
+            </div>
+        )
+        ReactDOM.render(el3, root);
+        
+    </script>
+</body>
+</html>

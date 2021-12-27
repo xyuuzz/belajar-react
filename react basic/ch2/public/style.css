@@ -1,0 +1,25 @@
+.center {
+    display: block;
+    margin: auto;
+}
+
+.img {
+    width: 250px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.mr-20 {
+    margin-right: 20px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.flex {
+    display: flex;
+    flex
+}

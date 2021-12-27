@@ -1,0 +1,21 @@
+.dark {
+    background-color: black;
+    color: white;
+}
+
+.gap {
+    padding: 20px 0;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn {
+    background-color: coral;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
