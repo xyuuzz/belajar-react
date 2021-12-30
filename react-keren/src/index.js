@@ -8,7 +8,7 @@ import {BrowserRouter}  from 'react-router-dom';
 ReactDOM.render(
   <React.StrictMode>
   {/* 
-    Ketika menggunakan react router, component yang menerpkan fiturnya, wajib dibungkus oleh component BrowserRouter yang disediakan oleh react-router-dom 
+    Ketika menggunakan react router, component yang menerapkan fiturnya, wajib dibungkus oleh component BrowserRouter yang disediakan oleh react-router-dom 
   */}
     <BrowserRouter>
         <ReactRouter />

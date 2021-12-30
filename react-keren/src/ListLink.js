@@ -37,6 +37,15 @@ export default function ListLink()
                                 <Link to='/login'>Login Website</Link>
                         }
                     </li>
+                    <li>
+                        <Link to='/use-reducer'>Hook useReducer</Link>
+                    </li>
+                    <li>
+                        <Link to='/use-layout-effect'>Hook Layout Effect</Link>
+                    </li>
+                    <li>
+                        <Link to='/use-imperative-handle'>Hook Use Imperative Handle</Link>
+                    </li>
                 </ul>
             </nav>
         </>
