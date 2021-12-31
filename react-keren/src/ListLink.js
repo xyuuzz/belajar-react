@@ -46,6 +46,15 @@ export default function ListLink()
                     <li>
                         <Link to='/use-imperative-handle'>Hook Use Imperative Handle</Link>
                     </li>
+                    <li>
+                        <Link to='/use-context'>Hook Use Context</Link>
+                    </li>
+                    <li>
+                        <Link to='/use-memo'>Hook Use Memo</Link>
+                    </li>
+                    <li>
+                        <Link to='/use-callback'>Hook Use Callback</Link>
+                    </li>
                 </ul>
             </nav>
         </>

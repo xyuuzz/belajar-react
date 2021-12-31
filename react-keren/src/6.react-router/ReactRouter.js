@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Route,
   Link,
@@ -19,6 +18,9 @@ import Dashboard from "../10.redirect/Dashboard";
 import UseReducer from "../11.useReducer/UseReducer";
 import UseLayoutEffect from "../12.useLayoutEffect/UseLayoutEffect";
 import UseImperativeHandle from '../13.useImperativeHandle/Parent';
+import UseContext from "../14.useContext/UseContext";
+import UseMemo from "../15.useMemo/UseMemo";
+import UseCallback from "../16.useCallback/UseCallback";
 
 /**
     React Router adalah sebuah package yang berguna untuk mengelola component yang akan ditampilkan berdasarkan route yang dikunjungi user saat itu.
@@ -65,7 +67,10 @@ function ReactRouter() {
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/use-reducer' element={<UseReducer />} />
             <Route path='/use-layout-effect' element={<UseLayoutEffect />} />
-            <Route path='/use-imperative-handle' element={<UseImperativeHandle />}></Route>
+            <Route path='/use-imperative-handle' element={<UseImperativeHandle />}/>
+            <Route path="/use-context" element={<UseContext />} />
+            <Route path="/use-memo" element={<UseMemo/>} />
+            <Route path="/use-callback" element={<UseCallback />} />
             <Route path='*' element={<NotFound />} />
         </Routes>
     </>
