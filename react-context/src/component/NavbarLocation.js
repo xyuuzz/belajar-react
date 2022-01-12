@@ -1,15 +1,26 @@
-import { useContext } from "react";
-import { AppContext } from "../react-context/appContext";
+import { useAppContext } from "../react-context/appContext";
 
 
 export default () => 
 {
-    const context = useContext(AppContext);
+    const [state, dispatch] = useAppContext()
     
     return (
         <>
             <h3>Info Lokasi: </h3>
-            <p>{context?.info?.location}</p>
+            <p>{state?.info?.location?.length ? state.info.location : "Kosong"}</p>
+            
+            <input type="text" placeholder="Change location"
+                onChange={e => {
+                    dispatch({
+                        type: "setInfo",
+                        data: {
+                            ...state.info,
+                            location: e.target.value
+                        }
+                    })
+                }}
+            />
         </>
     )
 }

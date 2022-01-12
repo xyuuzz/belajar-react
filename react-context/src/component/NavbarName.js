@@ -1,15 +1,26 @@
-import { useContext } from "react"
-import { AppContext } from "../react-context/appContext"
+import { useAppContext } from "../react-context/appContext"
 
 
 export default () => 
 {
-    const context = useContext(AppContext)
+    const [state, dispatch] = useAppContext()
     
     return (
         <>
             <h3>Nama saya: </h3>
-            <p>{context?.bioData?.nama}</p>
+            <p>{state?.bioData?.nama?.length ? state.bioData.nama : "Kosong"}</p>
+            
+            <input type="text" placeholder="Change name" 
+                onChange={e => {
+                    dispatch({
+                        type: "setBioData", 
+                        data: {
+                            ...state.bioData,
+                            nama: e.target.value
+                        }
+                    })
+                }}
+            />
         </>
     )
 }

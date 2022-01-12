@@ -5,6 +5,8 @@ export default () =>
 {
     return (
         <>
+            <br />
+            <h1>Bio Saya</h1>
             <NavbarName />
             <NavbarHobi />
         </>
